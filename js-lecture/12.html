@@ -1,0 +1,184 @@
+---
+title: Логические операторы
+layout: base
+permalink: /js-dir/logical-operators/
+---
+{% include header.html %}
+
+<section class="section-syntax">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-10">
+				<h1 class="section-syntax__head">
+					{{ page.title }}
+				</h1>
+				<div class="section-syntax__content">
+					<p>Для операций над логическими значениями в JavaScript есть <code>||</code> (ИЛИ), <code>&amp;&amp;</code> (И) и <code>!</code> (НЕ).</p>
+					<p>Хоть они и называются <em>«логическими»</em>, но в JavaScript могут применяться к значениям любого типа и возвращают также значения любого типа.</p>
+					<h2>|| (ИЛИ)</h2><p>Оператор ИЛИ выглядит как двойной символ вертикальной черты:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.1.png" alt="|| (ИЛИ)">
+					</div>
+
+					<p>Логическое ИЛИ в классическом программировании работает следующим образом: &quot;если <em>хотя бы один</em> из аргументов <code>true</code>, то возвращает <code>true</code>, иначе – <code>false</code>&quot;. В JavaScript, как мы увидим далее, это не совсем так, но для начала рассмотрим только логические значения.</p>
+					<p>Получается следующая «таблица результатов»:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.2.png" alt="|| (ИЛИ)">
+					</div>
+					
+					<p>Если значение не логического типа – то оно к нему приводится в целях вычислений. Например, число <code>1</code> будет воспринято как <code>true</code>, а <code>0</code> – как <code>false</code>:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.3.png" alt="|| (ИЛИ)">
+					</div>
+					
+					<p>Обычно оператор ИЛИ используется в <code>if</code>, чтобы проверить, выполняется ли хотя бы одно из условий, например:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.4.png" alt="|| (ИЛИ)">
+					</div>
+					
+					<p>Можно передать и больше условий:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.5.png" alt="|| (ИЛИ)">
+					</div>
+					
+					<h2>Короткий цикл вычислений</h2><p>JavaScript вычисляет несколько ИЛИ слева направо. При этом, чтобы экономить ресурсы, используется так называемый <em>«короткий цикл вычисления»</em>.</p>
+					<p>Допустим, вычисляются несколько ИЛИ подряд: <code>a || b || c || ...</code>. Если первый аргумент – <code>true</code>, то результат заведомо будет <code>true</code> (хотя бы одно из значений – <code>true</code>), и остальные значения игнорируются.</p>
+					<p>Это особенно заметно, когда выражение, переданное в качестве второго аргумента, имеет <em>сторонний эффект</em> – например, присваивает переменную.</p>
+					<p>При запуске примера ниже присвоение <code>x</code> не произойдёт:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.6.png" alt="|| (ИЛИ)">
+					</div>
+					
+					<p>…А в примере ниже первый аргумент – <code>false</code>, так что ИЛИ попытается вычислить второй, запустив тем самым присваивание:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.7.png" alt="|| (ИЛИ)">
+					</div>
+					
+					<h2>Значение ИЛИ</h2><blockquote class="quote"><div class="quote__i"><div class="quote__text"><p><code>||</code> запинается на «правде»,<br>
+					<code>&amp;&amp;</code> запинается на «лжи».</p>
+					</div></div><footer class="quote__footer">
+							<cite class="quote__author">Илья Канатов, участник курса JavaScript</cite>
+						</footer></blockquote><p>Итак, как мы видим, оператор ИЛИ вычисляет ровно столько значений, сколько необходимо – до первого <code>true</code>.</p>
+					<p>При этом оператор ИЛИ возвращает то значение, на котором остановились вычисления. Причём, не преобразованное к логическому типу.</p>
+					<p>Например:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.8.png" alt="|| (ИЛИ)">
+					</div>
+					
+					<p>Это используют, в частности, чтобы выбрать первое «истинное» значение из списка:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.9.png" alt="|| (ИЛИ)">
+					</div>
+					
+					<p>Если все значения «ложные», то <code>||</code> возвратит последнее из них:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.10.png" alt="|| (ИЛИ)">
+					</div>
+					
+					<p>Итак, оператор <code>||</code> вычисляет операнды слева направо до первого «истинного» и возвращает его, а если все ложные – то последнее значение.</p>
+					<p>Иначе можно сказать, что &quot;<code>||</code> запинается на правде&quot;.</p>
+					<h2>&amp;&amp; (И)</h2><p>Оператор И пишется как два амперсанда <code>&amp;&amp;</code>:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.11.png" alt="|| (ИЛИ)">
+					</div>
+					
+					<p>В классическом программировании И возвращает <code>true</code>, если оба аргумента истинны, а иначе – <code>false</code>:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.12.png" alt="|| (ИЛИ)">
+					</div>
+					
+					<p>Пример с <code>if</code>:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.13.png" alt="|| (ИЛИ)">
+					</div>
+					
+					<p>Как и в ИЛИ, в И допустимы любые значения:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.14.png" alt="|| (ИЛИ)">
+					</div>
+					
+					<p>К И применим тот же принцип «короткого цикла вычислений», но немного по-другому, чем к ИЛИ.</p>
+					<p>Если левый аргумент – <code>false</code>, оператор И возвращает его и заканчивает вычисления. Иначе – вычисляет и возвращает правый аргумент.</p>
+					<p>Например:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.15.png" alt="|| (ИЛИ)">
+					</div>
+					
+					<p>Можно передать и несколько значений подряд, при этом возвратится первое «ложное» (на котором остановились вычисления), а если его нет – то последнее:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.16.png" alt="|| (ИЛИ)">
+					</div>
+					
+					<p>Итак, оператор <code>&amp;&amp;</code> вычисляет операнды слева направо до первого «ложного» и возвращает его, а если все истинные – то последнее значение.</p>
+					<p>Иначе можно сказать, что &quot;<code>&amp;&amp;</code> запинается на лжи&quot;.</p>
+					<div class="important important_smart">
+						<div class="important__header"><span class="important__type">Приоритет у <code>&amp;&amp;</code> больше, чем у <code>||</code></span></div>
+						<div class="important__content"><p>Приоритет оператора И <code>&amp;&amp;</code> больше, чем ИЛИ <code>||</code>, так что он выполняется раньше.</p>
+					<p>Поэтому в следующем коде сначала будет вычислено правое И: <code>1 &amp;&amp; 0 = 0</code>, а уже потом – ИЛИ.</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.17.png" alt="|| (ИЛИ)">
+					</div>
+				
+				</div></div>
+					<div class="important important_warn">
+						<div class="important__header"><span class="important__type">Не используйте <code>&amp;&amp;</code> вместо <code>if</code></span></div>
+						<div class="important__content"><p>Оператор <code>&amp;&amp;</code> в простых случаях можно использовать вместо <code>if</code>, например:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.18.png" alt="|| (ИЛИ)">
+					</div>
+	
+					<p>Действие в правой части <code>&amp;&amp;</code> выполнится только в том случае, если до него дойдут вычисления. То есть, <code>alert</code> сработает, если в левой части будет <code>true</code>.</p>
+					<p>Получился аналог:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.19.png" alt="|| (ИЛИ)">
+					</div>
+					
+					<p>Однако, как правило, вариант с <code>if</code> лучше читается и воспринимается. Он более очевиден, поэтому лучше использовать его. Это, впрочем, относится и к другим неочевидным применениям возможностей языка.</p>
+					</div></div>
+					<h2>! (НЕ)</h2><p>Оператор НЕ – самый простой. Он получает один аргумент. Синтаксис:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.20.png" alt="|| (ИЛИ)">
+					</div>
+					
+					<p>Действия <code>!</code>:</p>
+					<ol>
+					<li>Сначала приводит аргумент к логическому типу <code>true/false</code>.</li>
+					<li>Затем возвращает противоположное значение.</li>
+					</ol>
+					<p>Например:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/12.21.png" alt="|| (ИЛИ)">
+					</div>
+					
+					<p><strong>В частности, двойное НЕ используют для преобразования значений к логическому типу:</strong></p>
+					
+
+					<div class="flex-center">
+						<img src="/images/js/12.22.png" alt="|| (ИЛИ)">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

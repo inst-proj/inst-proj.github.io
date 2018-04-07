@@ -1,0 +1,84 @@
+---
+title: Устаревшие теги и атрибуты
+layout: base
+permalink: /html-dir/tags/
+---
+{% include header.html %}
+
+<section class="section-syntax">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-10">
+				<h1 class="section-syntax__head">
+					{{ page.title }}
+				</h1>
+				<div class="section-syntax__content">
+					<p>HTML5  активно взаимодействует с CSS,  поэтому запрет на многие атрибуты, начатый в HTML4 в пользу стилей, только  усилился. Включение новых элементов вроде <span class="tag">&lt;video&gt;</span> и <span class="tag">&lt;audio&gt;</span> также  сводит на нет теги, на которые возлагалась функция мультимедиа.</p><!--break-->
+					<h2>Устаревшие теги</h2>
+					<p>Эти теги более не поддерживаются и должны исключаться  автором из кода.</p>
+					<ul>
+						<li><span class="tag">&lt;applet&gt;</span>  — добавляет Java-апплет в документ. Вместо него следует использовать <span class="tag">&lt;embed&gt;</span> или <span class="tag">&lt;object&gt;</span>.</li>
+						<li>&lt;acronym&gt;  — этот тег вызывал постоянные вопросы, что такое акроним и чем он отличается от  аббревиатуры. Для упрощения остался единственный тег <span class="tag">&lt;abbr&gt;</span>.</li>
+						<li><span class="tag">&lt;bgsound&gt;</span>  — определяет музыкальный файл, который будет проигрываться на веб-странице при  её открытии. Для воспроизведения музыки используйте новый элемент <span class="tag">&lt;audio&gt;</span>.</li>
+						<li><span class="tag">&lt;dir&gt;</span>  — создает список, содержащий названия директорий, вместо него используйте <span class="tag">&lt;ul&gt;</span>.</li>
+						<li><span class="tag">&lt;frame&gt;</span>,  <span class="tag">&lt;frameset&gt;</span>, <span class="tag">&lt;noframe&gt;</span> — фреймы более не  поддерживаются. Если они вам требуются, используйте другую версию HTML или  <span class="tag">&lt;iframe&gt;</span> совместно со стилями.</li>
+						<li><span class="tag">&lt;isindex&gt;</span>  — предназначен для поискового индекса в текущем документе. Комбинация  <span class="tag">&lt;form&gt;</span> и <span class="tag">&lt;input&gt;</span> лучше справляется с этой задачей.</li>
+						<li><span class="tag">&lt;listing&gt;</span>, <span class="tag">&lt;xmp&gt;</span> — для вывода листинга программы  предназначены <span class="tag">&lt;pre&gt;</span> и <span class="tag">&lt;code&gt;</span>.</li>
+						<li><span class="tag">&lt;nextid&gt;</span> — этот тег не предназначен для людей и указывает  идентификатор следующего документа для автоматических редакторов HTML. Полностью исключён.</li>
+						<li><span class="tag">&lt;noembed&gt;</span> — предназначен для отображения информации на  веб-странице, если браузер не поддерживает работу с плагинами. В качестве  альтернативы используйте <span class="tag">&lt;object&gt;</span>.</li>
+						<li><span class="tag">&lt;plaintext&gt;</span> — отображает  содержимое контейнера «как есть», любые теги выводятся как текст. Вместо тега  используйте MIME-тип <span class="value">text/plain</span>.</li>
+						<li><span class="tag">&lt;rb&gt;</span>  — определяет базовый текст внутри <span class="tag">&lt;ruby&gt;</span>. Этот тег полностью исключён.</li>
+						<li><span class="tag">&lt;strike&gt;</span>  — для зачёркнутого текста применяется <span class="tag">&lt;s&gt;</span>, а для указания редакторской  правки <span class="tag">&lt;del&gt;</span>.<br />
+						<span class="tag">&lt;basefont&gt;</span>,  <span class="tag">&lt;big&gt;</span>, <span class="tag">&lt;blink&gt;</span>, <span class="tag">&lt;center&gt;</span>, <span class="tag">&lt;font&gt;</span>, <span class="tag">&lt;marquee&gt;</span>,  <span class="tag">&lt;multicol&gt;</span>, <span class="tag">&lt;nobr&gt;</span>, <span class="tag">&lt;spacer&gt;</span>, <span class="tag">&lt;tt&gt;</span>, <span class="tag">&lt;u&gt;</span> — вместо  этих тегов управляющих видом текста применяются стили.</li>
+					</ul>
+						<p>  Обратите внимание, что тег <span class="tag">&lt;small&gt;</span> допустим, хотя  относится к той же группе тегов, что и <span class="tag">&lt;big&gt;</span>.</p>
+					
+					<h2>Устаревшие, но поддерживаемые атрибуты</h2>
+					<p>Атрибут <span class="attribute">http-equiv</span> тега <span class="tag">&lt;meta&gt;</span> для указания языка  должен заменяться атрибутом <span class="attribute">lang</span>.</p>
+					<p>  Было:</p>
+					<pre><code class="keyword">&lt;meta http-equiv=&quot;content-language&quot; content=&quot;ru&quot; /&gt;</code></pre>
+					<p>  Стало:</p>
+					<pre><code class="keyword">&lt;html lang=&quot;ru&quot;&gt;</code></pre>
+					<p>  Атрибут <span class="attribute">name</span> тега <span class="tag">&lt;a&gt;</span> должен заменяться атрибутом <span class="attribute">id</span>.  Если name присутствует, то должен содержать пустую строку или совпадать со  значением <span class="attribute">id</span>.</p>
+					<p>  Было:</p>
+					<pre><code class="keyword">&lt;a name=&quot;p12&quot;&gt;&lt;/a&gt;</code></pre>
+					<p>  Стало:</p>
+					<pre><code class="keyword">&lt;a id=&quot;p12&quot;&gt;&lt;/a&gt;</code></pre>
+					<p>  Атрибут <span class="attribute">language</span> тега <span class="tag">&lt;script&gt;</span>  должен быть опущен. Если он присутствует, значение совпадает с <span class="value">JavaScript</span> или другим  типом, но в таком случае язык скрипта следует указать через <span class="attribute">type</span>.</p>
+					<p>  Было:</p>
+					<pre><code class="keyword">&lt;script type=&quot;text/javascript&quot; language=&quot;JavaScript&quot;&gt;</code></pre>
+					<p>  Стало:</p>
+					<pre><code class="keyword">&lt;script&gt;</code></pre>
+					<p>  Атрибут <span class="attribute">border</span> тега <span class="tag">&lt;img&gt;</span> не  указывается, а толщина границы задаётся через стили. Если этот атрибут  присутствует, его значение должно быть 0.</p>
+					<p>  Было:</p>
+					<pre><code class="keyword">&lt;img border=&quot;1&quot;&gt;</code></pre>
+					<p>  Стало:</p>
+					<pre><code class="keyword">&lt;img style=&quot;border: 1px solid black&quot;&gt;</code></pre>
+					<p>  Наличие атрибута <span class="attribute">summary</span> тега <span class="tag">&lt;table&gt;</span> приведёт к  предупреждению.</p>
+					<h2>Устаревшие атрибуты</h2>
+					<ul>
+						<li>Элемент  <span class="tag">&lt;a&gt;</span>: <span class="attribute">charset</span>, <span class="attribute">coords</span>, <span class="attribute">shape</span>, <span class="attribute">methods</span>, <span class="attribute">name</span>, <span class="attribute">rev</span>, <span class="attribute">urn</span>.</li>
+						<li>    Элемент  <span class="tag">&lt;area&gt;</span>: <span class="attribute">nohref</span>.</li>
+						<li>    Элемент  <span class="tag">&lt;body&gt;</span>: <span class="attribute">alink</span>, <span class="attribute">bgcolor</span>, <span class="attribute">link</span>, <span class="attribute">marginbottom</span>, <span class="attribute">marginheight</span>, <span class="attribute">marginleft</span>,  <span class="attribute">marginright</span>, <span class="attribute">margintop</span>, <span class="attribute">marginwidth</span>, <span class="attribute">text</span>, <span class="attribute">vlink</span>.</li>
+						<li>    Элемент  <span class="tag">&lt;br&gt;</span>: <span class="attribute">clear</span>.</li>
+						<li>    Элемент <span class="tag">&lt;embed&gt;</span>: <span class="attribute">name</span>.</li>
+						<li>    Элемент  <span class="tag">&lt;head&gt;</span>: <span class="attribute">profile</span>.</li>
+						<li>    Элемент  <span class="tag">&lt;html&gt;</span>: <span class="attribute">version</span>.</li>
+						<li>    Элемент  <span class="tag">&lt;iframe&gt;</span>: <span class="attribute">longdesc</span>.</li>
+						<li>    Элемент  <span class="tag">&lt;img&gt;</span>: <span class="attribute">longdesc</span>, <span class="attribute">lowsrc</span>, <span class="attribute">name</span>. </li>
+						<li>    Элемент  <span class="tag">&lt;input&gt;</span>: <span class="attribute">usemap</span>.</li>
+						<li>    Элемент  <span class="tag">&lt;link&gt;</span>: <span class="attribute">charset</span>, <span class="attribute">methods</span>, <span class="attribute">rev</span>, <span class="attribute">target</span>, <span class="attribute">urn</span>.</li>
+						<li>    Элемент  <span class="tag">&lt;meta&gt;</span>: <span class="attribute">scheme</span>.</li>
+						<li>    Элемент  <span class="tag">&lt;option&gt;</span>: <span class="attribute">name</span>.</li>
+						<li>    Элемент  <span class="tag">&lt;object&gt;</span>: <span class="attribute">archive</span>, <span class="attribute">classid</span>, <span class="attribute">code</span>, <span class="attribute">codebase</span>, <span class="attribute">codetype</span>, <span class="attribute">declare</span>, <span class="attribute">standby</span></li>
+						<li>    Элемент  <span class="tag">&lt;param&gt;</span>: <span class="attribute">type</span>, <span class="attribute">valuetype</span>.</li>
+						<li>    Элемент  <span class="tag">&lt;script&gt;</span>: <span class="attribute">event</span>, <span class="attribute">for</span>, <span class="attribute">language</span>.</li>
+						<li>    Элемент  <span class="tag">&lt;table&gt;</span>: <span class="attribute">datapagesize</span>.</li>
+						<li>    Элемент <span class="tag">&lt;td&gt;</span>  и <span class="tag">&lt;th&gt;</span>: <span class="attribute">abbr</span>, <span class="attribute">axis</span>.</li>
+					</ul>
+					<p>  Также запрещён атрибут <span class="attribute">datasrc</span> для всех элементов. </p></div></div></div> 
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

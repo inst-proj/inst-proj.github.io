@@ -1,0 +1,94 @@
+---
+title: Взаимодействие с пользователем - alert, prompt, confirm
+layout: base
+permalink: /js-dir/alert-prompt-confirm/
+---
+{% include header.html %}
+
+<section class="section-syntax">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-10">
+				<h1 class="section-syntax__head">
+					{{ page.title }}
+				</h1>
+				<div class="section-syntax__content">
+					<p>В этом разделе мы рассмотрим базовые UI операции: <code>alert</code>, <code>prompt</code> и <code>confirm</code>, которые позволяют работать с данными, полученными от пользователя.</p>
+					<h2>alert</h2><p>Синтаксис:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/10.1.png" alt="alert">
+					</div>
+					
+					<p><code>alert</code> выводит на экран окно с сообщением и приостанавливает выполнение скрипта, пока пользователь не нажмёт «ОК».</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/10.2.png" alt="alert">
+					</div>
+					
+					<p>Окно сообщения, которое выводится, является <em>модальным окном</em>. Слово «модальное» означает, что посетитель не может взаимодействовать со страницей, нажимать другие кнопки и т.п., пока не разберётся с окном. В данном случае – пока не нажмёт на «OK».</p>
+					<h2>prompt</h2><p>Функция prompt принимает два аргумента:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/10.3.png" alt="prompt">
+					</div>
+						
+					<p>Она выводит модальное окно с заголовком <code>title</code>, полем для ввода текста, заполненным строкой по умолчанию <code>default</code> и кнопками OK/CANCEL.</p>
+					<p>Пользователь должен либо что-то ввести и нажать OK, либо отменить ввод кликом на CANCEL или нажатием <kbd class="shortcut">Esc</kbd> на клавиатуре.</p>
+					<p><strong>Вызов <code>prompt</code> возвращает то, что ввёл посетитель – строку или специальное значение <code>null</code>, если ввод отменён.</strong></p>
+					<div class="important important_warn">
+						<div class="important__header"><span class="important__type">Safari 5.1+ не возвращает <code>null</code></span></div>
+						<div class="important__content"><p>Единственный браузер, который не возвращает <code>null</code> при отмене ввода – это Safari. При отсутствии ввода он возвращает пустую строку. Предположительно, это ошибка в браузере.</p>
+					<p>Если нам важен этот браузер, то пустую строку нужно обрабатывать точно так же, как и <code>null</code>, т.е. считать отменой ввода.</p>
+					</div></div>
+					<p>Как и в случае с <code>alert</code>, окно <code>prompt</code> модальное.</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/10.4.png" alt="alert prompt">
+					</div>
+						
+					<div class="important important_warn">
+						<div class="important__header"><span class="important__type">Всегда указывайте <code>default</code></span></div>
+						<div class="important__content"><p>Второй параметр может отсутствовать. Однако при этом IE вставит в диалог значение по умолчанию <code>&quot;undefined&quot;</code>.</p>
+					<p>Запустите этот код <u>в IE</u>, чтобы понять о чём речь:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/10.5.png" alt="default">
+					</div>
+					
+					<p>Поэтому рекомендуется <em>всегда</em> указывать второй аргумент:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/10.6.png" alt="alert">
+					</div>
+				
+					</div></div>
+					<h2>confirm</h2><p>Синтаксис:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/10.7.png" alt="comfirm">
+					</div>
+						
+					<p><code>confirm</code> выводит окно с вопросом <code>question</code> с двумя кнопками: OK и CANCEL.</p>
+					<p><strong>Результатом будет <code>true</code> при нажатии OK и <code>false</code> – при CANCEL(<kbd class="shortcut">Esc</kbd>).</strong></p>
+					<p>Например:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/10.8.png" alt="true false">
+					</div>
+					
+					<h2>Особенности встроенных функций</h2><p>Конкретное место, где выводится модальное окно с вопросом – обычно это центр браузера, и внешний вид окна выбирает браузер. Разработчик не может на это влиять.</p>
+					<p>С одной стороны – это недостаток, так как нельзя вывести окно в своем, особо красивом, дизайне.</p>
+					<p>С другой стороны, преимущество этих функций по сравнению с другими, более сложными методами взаимодействия, которые мы изучим в дальнейшем – как раз в том, что они очень просты.</p>
+					<p>Это самый простой способ вывести сообщение или получить информацию от посетителя. Поэтому их используют в тех случаях, когда простота важна, а всякие «красивости» особой роли не играют.</p>
+					<h2>Итоги</h2>
+					<ul>
+					<li><code>alert</code> выводит сообщение.</li>
+					<li><code>prompt</code> выводит сообщение и ждёт, пока пользователь введёт текст, а затем возвращает введённое значение или <code>null</code>, если ввод отменён (CANCEL/<kbd class="shortcut">Esc</kbd>).</li>
+					<li><code>confirm</code> выводит сообщение и ждёт, пока пользователь нажмёт «OK» или «CANCEL» и возвращает <code>true/false</code>.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

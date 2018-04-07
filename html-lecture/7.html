@@ -1,0 +1,35 @@
+---
+title: Корневой элемент
+layout: base
+permalink: /html-dir/root/
+---
+{% include header.html %}
+
+<section class="section-syntax">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-10">
+				<h1 class="section-syntax__head">
+					{{ page.title }}
+				</h1>
+				<div class="section-syntax__content">
+						<p>В HTML корневым называется элемент <span class="tag">&lt;html&gt;</span>, внутри  которого располагаются элементы <span class="tag">&lt;body&gt;</span> и <span class="tag">&lt;head&gt;</span>.  Само присутствие открывающего тега <span class="tag">&lt;html&gt;</span> и закрывающего <span class="tag">&lt;/html&gt;</span> является необязательным и их  можно опустить (пример&nbsp;4.1).</p>
+						
+						<div class="flex-center">
+							<img src="/images/without-root.jpg" alt="root">
+							<p class="exampleTitle2">Пример 4.1. Страница без корневого элемента</p>
+						</div>
+					
+						<p>В качестве атрибутов используются <a href="/globalattr/">глобальные атрибуты</a>,  например, <span class="attribute">lang</span> для указания языка документа. В примере 4.2 показана страница на  английском языке, поэтому к тегу <span class="tag">&lt;html&gt;</span> добавлен атрибут <span class="attribute">lang</span> со  значением <span class="value">en</span>. </p>
+						
+						<div class="flex-center">
+							<img src="/images/attr-lang.jpg" alt="lang">
+							<p class="exampleTitle2">Пример 4.2.  Атрибут lang </p>
+						</div>
+			
+						<p>Уникальным для корневого элемента  является атрибут <span class="attribute">manifest</span>, который указывает манифест кэша приложения, что  позволяет создавать автономный сайт, работающий даже без подключения к  Интернету.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

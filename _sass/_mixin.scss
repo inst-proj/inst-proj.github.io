@@ -1,0 +1,12 @@
+@mixin font-size($normal, $md, $sm, $xs){
+	font-size: $normal;
+	@media (max-width: $screen-md-max) {
+		font-size: $md;
+	}
+	@media (max-width: $screen-sm-max) {
+		font-size: $sm;
+	}
+	@media (max-width: $screen-xs-max) {
+		font-size: $xs;
+	}
+}

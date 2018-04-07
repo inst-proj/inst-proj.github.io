@@ -1,0 +1,19 @@
+baseurl: ""
+permalink: /:title/
+markdown: kramdown
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - README.md
+  - gulpfile.js
+  - deploy
+  - deploy-key.enc
+  - deploy-key
+
+url:
+template: 'ocean' # Доступные шаблоны: ocean, flamingo, forest, lilac, mold, strawberry, deep
+title: 'University courses'
+author: 'Borovoy Artem'
+expert: 'Курсы по программированию'
+description: 'University courses - Курсы по программированию'

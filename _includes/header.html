@@ -1,0 +1,31 @@
+<header class="header">
+	
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+			<div class="container">
+				<a class="navbar-brand" href="/">
+					<img class="navbar-brand-icon" src="/images/nav-brand.png" alt="brand">
+					Курсы
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+					<div class="navbar-nav">
+						<a class="nav-item nav-link active {% if page.title == "Курсы" %} yak {% endif %}" href="{% if page.title == "Курсы" %} #main {% else %} / {% endif %}">Главная <span class="sr-only">(current)</span></a>
+						<a class="nav-item nav-link {% if page.title == "Курсы" %} yak {% endif %}" href="{% if page.title == "Курсы" %} #content {% else %} /#content {% endif %}">Лекции</a>
+						<a class="nav-item nav-link {% if page.title == "Курсы" %} yak {% endif %}" href="#">Контакты</a>
+					</div>
+					<div class="search-holder">
+						<div class="circle"></div>
+						<div class="form">
+							<div class="search-button"></div>
+							<input type="text" class="search-input" placeholder="Поиск ..." />
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</nav>
+		
+</header>
