@@ -16,13 +16,22 @@
 						<a class="nav-item nav-link {% if page.title == "Курсы" %} yak {% endif %}" href="{% if page.title == "Курсы" %} #content {% else %} /#content {% endif %}">Лекции</a>
 						<a class="nav-item nav-link {% if page.title == "Курсы" %} yak {% endif %}" href="#">Контакты</a>
 					</div>
-					<div class="search-holder">
-						<div class="circle"></div>
-						<div class="form">
-							<div class="search-button"></div>
-							<input type="text" class="search-input" placeholder="Поиск ..." />
+
+
+					<div class="header__search-container">
+
+						<div class="search-holder">
+							<div class="circle"></div>
+							<div class="form">
+								<div class="search-button"></div>
+								<input type="text" class="search-input" id="search-input" placeholder="Поиск ..." autocomplete="off"/>
+							</div>
 						</div>
+
+						<ul id="results-container" class="header__result-container"></ul>
 					</div>
+					
+
 				</div>
 
 			</div>

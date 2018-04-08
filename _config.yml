@@ -11,9 +11,17 @@ exclude:
   - deploy-key.enc
   - deploy-key
 
-url:
+url: https://inst-proj.github.io/
 template: 'ocean' # Доступные шаблоны: ocean, flamingo, forest, lilac, mold, strawberry, deep
 title: 'University courses'
+name: Курсы по программированию
 author: 'Borovoy Artem'
 expert: 'Курсы по программированию'
 description: 'University courses - Курсы по программированию'
+
+lunr_search:
+  excludes: [rss.xml, atom.xml]
+
+lunr_search:
+  stopwords: "stopwords.txt"
+  min_length: 3

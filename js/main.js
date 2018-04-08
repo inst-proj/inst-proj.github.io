@@ -6,6 +6,7 @@ $(document).ready(function(){
         }
 	    return false; // выключаем стандартное действие
     });
+
 });
 
 $(window).on('load', function () {
@@ -20,3 +21,19 @@ $(window).on('load', function () {
         $(this).parent().parent().toggleClass('active');
     });
 })();
+
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 1){  
+        $('.header').addClass("glide");
+    }
+    else{
+         $('.header').removeClass("glide");
+    }
+});
+
+var sjs = SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json'
+})  
