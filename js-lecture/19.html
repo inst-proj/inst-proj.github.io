@@ -1,0 +1,92 @@
+---
+title: Именованные функциональные выражения
+layout: base
+permalink: /js-dir/named-functional-expressions/
+---
+{% include header.html %}
+
+<section class="section-syntax">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-10">
+				<h1 class="section-syntax__head">
+					{{ page.title }}
+				</h1>
+				<div class="section-syntax__content">
+					<p>Специально для работы с рекурсией в JavaScript существует особое расширение функциональных выражений, которое называется «Named Function Expression» (сокращённо NFE) или, по-русски, <em>«именованное функциональное выражение»</em>.</p>
+					<h2>Named Function Expression</h2><p>Обычное функциональное выражение:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/19.1.png" alt="Named Function Expression">
+					</div>
+					
+					<p>Именованное с именем <code>sayHi</code>:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/19.2.png" alt="Named Function Expression">
+					</div>
+					
+					<p>Что же это за имя, которое идёт в дополнение к <code>f</code>, и зачем оно?</p>
+					<p>Имя функционального выражения (<code>sayHi</code>) имеет особый смысл. Оно доступно <em>только изнутри</em> самой функции (<code>f</code>).</p>
+					<p>Это ограничение видимости входит в стандарт JavaScript и поддерживается всеми браузерами, кроме IE8-.</p>
+					<p>Например:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/19.3.png" alt="Named Function Expression">
+					</div>
+					
+					<p>Кроме того, имя NFE нельзя перезаписать:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/19.4.png" alt="Named Function Expression">
+					</div>
+					
+					<p>В режиме <code>use strict</code> код выше выдал бы ошибку.</p>
+					<p>Как правило, имя NFE используется для единственной цели – позволить изнутри функции вызвать саму себя.</p>
+					<h2>Пример использования</h2><p>NFE используется в первую очередь в тех ситуациях, когда функцию нужно передавать в другое место кода или перемещать из одной переменной в другую.</p>
+					<p><strong>Внутреннее имя позволяет функции надёжно обращаться к самой себе, где бы она ни находилась.</strong></p>
+					<p>Вспомним, к примеру, функцию-факториал из задачи Вычислить факториал:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/19.5.png" alt="Пример использования">
+					</div>
+					
+					<p>Попробуем перенести её в другую переменную <code>g</code>:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/19.6.png" alt="Пример использования">
+					</div>
+					
+					<p>Ошибка возникла потому что функция из своего кода обращается к своему старому имени <code>f</code>. А этой функции уже нет, <code>f = null</code>.</p>
+					<p>Для того, чтобы функция всегда надёжно работала, объявим её как Named Function Expression:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/19.7.png" alt="Пример использования">
+					</div>
+					
+					<div class="important important_warn">
+						<div class="important__header"><span class="important__type">В браузере IE8- создаются две функции</span></div>
+						<div class="important__content"><p>Как мы говорили выше, в браузере IE до 9 версии имя NFE видно везде, что является ошибкой с точки зрения стандарта.</p>
+					<p>…Но на самом деле ситуация ещё забавнее. Старый IE создаёт в таких случаях целых две функции: одна записывается в переменную <code>f</code>, а вторая – в переменную <code>factorial</code>.</p>
+					<p>Например:</p>
+					
+					<div class="flex-center">
+						<img src="/images/js/19.8.png" alt="Пример использования">
+					</div>
+					
+					<p>Все остальные браузеры полностью поддерживают именованные функциональные выражения.</p>
+					</div></div>
+					<div class="important important_smart">
+						<div class="important__header"><span class="important__type">Устаревшее специальное значение <code>arguments.callee</code></span></div>
+						<div class="important__content"><p>Если вы давно работаете с JavaScript, то, возможно, знаете, что раньше для этой цели также служило специальное значение <code>arguments.callee</code>.</p>
+					<p>Если же вы в курсе, то стоит иметь в виду, что оно официально исключено из современного стандарта. А NFE – это наше настоящее.</p>
+					</div></div>
+					<h2>Итого</h2><p>Если функция задана как Function Expression, ей можно дать имя.</p>
+					<p>Оно будет доступно только внутри функции (кроме IE8-).</p>
+					<p>Это имя предназначено для надёжного рекурсивного вызова функции, даже если она записана в другую переменную.</p>
+					<p>Обратим внимание, что с Function Declaration так поступить нельзя. Такое «специальное» внутреннее имя функции задаётся только в синтаксисе Function Expression.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

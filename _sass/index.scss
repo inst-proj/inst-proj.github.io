@@ -164,6 +164,9 @@ body {
       list-style-type: none;
       margin: 5px;
       padding: 5px 10px;
+      a {
+        color: rgba(33,37,41,1);
+      }
     }
   }
   .navbar-brand-icon {
@@ -355,7 +358,7 @@ body {
 .section-content {
   min-height: 100vh;
   background-color: $white;
-  padding: 100px 0;
+  padding: 90px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -404,7 +407,10 @@ body {
 
 
 .section-syntax {
-  padding-top: 80px;
+  padding-top: 110px;
+  h2 {
+    font-weight: bold;
+  }
   h4 {
     font-size: 20px;
     margin: 0;
@@ -490,5 +496,23 @@ body {
         width: 25px;
       }
     }
+  }
+  .function-execution-context {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    li {
+      border: 1px solid black;
+      padding: 3px 5px;
+      margin-bottom: 5px;
+      &:last-child {
+        font-weight: bold;
+      }
+    }
+  }
+  code {
+    padding: 2px 4px;
+    background-color: #f5f2f0;;
   }
 }
