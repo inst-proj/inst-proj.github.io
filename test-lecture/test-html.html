@@ -1,0 +1,42 @@
+---
+title: Тесты HTML5
+layout: base
+permalink: /test-html
+---
+
+<section class="section-syntax section-test">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="section-test__test-content">
+            
+                    <div class="section-test__timer">
+                        <p id="time">Затрачено времени: 0 сек</p>
+                    </div>
+    
+                    <div class="section-test__result">
+                        <p id="result"></p>
+                    </div>
+    
+                    <div class="section-test__quest">
+                        <p id="question"></p>
+                    </div>
+    
+                    <div class="section-test__options">
+                        <button onclick="check(1)" class="oganesyan" id="option1"></button>
+                
+                        <button onclick="check(2)" class="oganesyan" id="option2"></button>
+                        
+                        <button onclick="check(3)" class="oganesyan" id="option3"></button>
+                        
+                        <button onclick="check(4)" class="oganesyan" id="option4"></button>
+                    </div>
+                    <button id="start" class="start-btn" onclick="check(0)">Приступить к тесту</button>
+                    <script type="text/javascript"> var curent_url = document.URL; document.write("<a id='end' style='display: none;' class='start-btn' href='" + curent_url + "'>Начать сначала</a>"); </script>
+                </div>
+
+            </div>
+        </div>
+    </div>		
+		
+</section>
