@@ -6,8 +6,11 @@ $(window).on('load', function () {
 });
 
 (function () {
+    const rContainer = $("#results-container");
+
     $(document).on('click', '.search-button', function () {
         $(this).parent().parent().toggleClass('active');
+        rContainer.toggleClass('active');
     });
 })();
 
@@ -27,9 +30,12 @@ var sjs = SimpleJekyllSearch({
     json: '/search.json'
 })  
 
+
+
 ///////////////////////////
 
 $(document).ready(function () {
+
     $(document).on("scroll", onScroll);
     
     //smoothscroll

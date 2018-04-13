@@ -9,8 +9,9 @@ var data_array = [
     ["Чтобы задать всплывающую подсказку при наведении на изображение необходимо использовать атрибут:","width","title","alt","другое",2],
     ["HTML расшифровывается как:","Hyperpyper Trob Meas Lock","High Too My Link","HyperText Markup Language","мне всё равно",3],
     ["Чтобы организовать ненумерованный список необходимо использовать тег:","&ltol&gt","&ltul&gt","&ltth&gt","&lthr&gt",2],
-    ["Какой из перечисленных ниже тегов является блочным?","&ltdiv&gt","&ltspan&gt","&ltq&gt","&lta&gt",1],
+    ["Какой из перечисленных ниже тегов является блочным?","&ltdiv&gt","&ltspan&gt","&ltq&gt","&lta&gt",1]
 ];
+
 
 var plus = 0;
 var time = 0;
@@ -19,13 +20,14 @@ var count_answer = data_array.length;
 
 function sec() {
     time++;	
-    document.getElementById('time').innerHTML='Затрачено времени: ' + time + ' сек';
+    document.getElementById('time').innerHTML='Затрачено времени: <span>' + time + '</span> сек';
 }
 
 function check(num){
 
     if(num == 0){ 
     
+        document.getElementById('time').classList.remove('disNone');
         document.getElementById('option1').style.display='block';
         document.getElementById('option2').style.display='block';
         document.getElementById('option3').style.display='block';
@@ -36,6 +38,7 @@ function check(num){
         document.getElementById('option2').innerHTML=data_array[cur_answer][2];
         document.getElementById('option3').innerHTML=data_array[cur_answer][3];
         document.getElementById('option4').innerHTML=data_array[cur_answer][4];
+
         document.getElementById('question').innerHTML=data_array[cur_answer][0];
         
         document.getElementById('start').style.display='none';
@@ -47,9 +50,9 @@ function check(num){
 
         if( num ==  data_array[cur_answer][5]){
             plus++;
-            document.getElementById('result').innerHTML='Верно!';
+            document.getElementById('result').innerHTML='<span class="true">Верно!</span>';
         }else{
-            document.getElementById('result').innerHTML="Неверно! Правильный ответ: " + data_array[cur_answer][data_array[cur_answer][5]];
+            document.getElementById('result').innerHTML='<span class="false">Неверно! Правильный ответ: ' + data_array[cur_answer][data_array[cur_answer][5]] + '</span>';
         }
             
         cur_answer++;
@@ -81,4 +84,4 @@ function check(num){
     }
 }
 
-var curent_url = document.URL; document.write("<a id='end' style='display: none;' class='oganesyan' href='" + curent_url + "'>Начать сначала</a>");
+var curent_url = document.URL; document.write("<a id='end' style='display: none;' class='test-option' href='" + curent_url + "'>Начать сначала</a>");
