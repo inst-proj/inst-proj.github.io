@@ -15,14 +15,19 @@ $(window).on('load', function () {
 })();
 
 
-$(window).scroll(function() {
-    if ($(this).scrollTop() > 1){  
-        $('.header').addClass("glide");
-    }
-    else{
-         $('.header').removeClass("glide");
-    }
-});
+if (window.matchMedia('(min-width: 992px)').matches)
+{
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1){  
+            $('.header').addClass("glide");
+        }
+        else{
+             $('.header').removeClass("glide");
+        }
+    });
+}
+
+
 
 var sjs = SimpleJekyllSearch({
     searchInput: document.getElementById('search-input'),
@@ -60,17 +65,19 @@ $(document).ready(function () {
     });
 });
 
-function onScroll(event){
-    var scrollPos = $(document).scrollTop();
-    $('.navbar-nav a').each(function () {
-        var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('.navbar-nav ul li a').removeClass("active");
-            currLink.addClass("active");
-        }
-        else{
-            currLink.removeClass("active");
-        }
-    });
+if(window.location.pathname == "/") {
+    function onScroll(event){
+        var scrollPos = $(document).scrollTop();
+        $('.navbar-nav a').each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                $('.navbar-nav ul li a').removeClass("active");
+                currLink.addClass("active");
+            }
+            else{
+                currLink.removeClass("active");
+            }
+        });
+    }
 }

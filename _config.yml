@@ -19,9 +19,3 @@ author: 'Borovoy Artem'
 expert: 'Курсы по программированию'
 description: 'University courses - Курсы по программированию'
 
-lunr_search:
-  excludes: [rss.xml, atom.xml]
-
-lunr_search:
-  stopwords: "stopwords.txt"
-  min_length: 3
