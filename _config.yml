@@ -11,11 +11,11 @@ exclude:
   - deploy-key.enc
   - deploy-key
 
-url: https://inst-proj.github.io/
+url: inst-proj.github.io
 template: 'ocean' # Доступные шаблоны: ocean, flamingo, forest, lilac, mold, strawberry, deep
-title: 'University courses'
-name: Курсы по программированию
+title: 'University courses - Курсы по программированию'
+name: 'Курсы по программированию'
 author: 'Borovoy Artem'
 expert: 'Курсы по программированию'
-description: 'University courses - Курсы по программированию'
-
+keywords: 'University courses - Курсы по программированию HTML CSS JAVASCRIPT JS Тесты по прогроммированию Тесты по HTML CSS Обучающие лекции Онлайн уроки Обучение Изучение Веб-разработки Веб-разработка Веб разработка Бесплатные курсы обучение'
+description: 'University courses - Курсы по программированию HTML CSS JAVASCRIPT JS Тесты по прогроммированию Тесты по HTML CSS Обучающие лекции Онлайн уроки Обучение Изучение Веб-разработки Веб-разработка Веб разработка Бесплатные курсы обучение'

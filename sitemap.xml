@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+	<loc>https://inst-proj.github.io/</loc>
+	<lastmod>2018-05-16T16:58:09+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/html-lecture/syntax/</loc>
+	<lastmod>2018-05-16T16:58:09+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/html-lecture/tags/</loc>
+	<lastmod>2018-05-16T16:58:09+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/html-lecture/attributes/</loc>
+	<lastmod>2018-05-16T16:58:10+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/html-lecture/globalattr/</loc>
+	<lastmod>2018-05-16T16:58:10+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/html-lecture/data/</loc>
+	<lastmod>2018-05-16T16:58:11+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/html-lecture/attr-value/</loc>
+	<lastmod>2018-05-16T16:58:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/html-lecture/root/</loc>
+	<lastmod>2018-05-16T16:58:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/html-lecture/meta/</loc>
+	<lastmod>2018-05-16T16:58:12+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/html-lecture/form/</loc>
+	<lastmod>2018-05-16T16:58:13+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/intro-css/</loc>
+	<lastmod>2018-05-16T16:58:14+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/advan-css/</loc>
+	<lastmod>2018-05-16T16:58:14+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/add-css/</loc>
+	<lastmod>2018-05-16T16:58:15+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/media-types/</loc>
+	<lastmod>2018-05-16T16:58:16+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/syntax-css/</loc>
+	<lastmod>2018-05-16T16:58:16+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/value-css-prop/</loc>
+	<lastmod>2018-05-16T16:58:17+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/tag-selectors/</loc>
+	<lastmod>2018-05-16T16:58:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/classes/</loc>
+	<lastmod>2018-05-16T16:58:18+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/identifiers/</loc>
+	<lastmod>2018-05-16T16:58:19+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/context-selectors/</loc>
+	<lastmod>2018-05-16T16:58:20+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/neighbor-selectors/</loc>
+	<lastmod>2018-05-16T16:58:20+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/child-selectors/</loc>
+	<lastmod>2018-05-16T16:58:21+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/attr-selectors/</loc>
+	<lastmod>2018-05-16T16:58:22+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/universal-selector/</loc>
+	<lastmod>2018-05-16T16:58:22+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/pseudo-classes/</loc>
+	<lastmod>2018-05-16T16:58:23+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/pseudo-elements/</loc>
+	<lastmod>2018-05-16T16:58:24+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/grouping/</loc>
+	<lastmod>2018-05-16T16:58:24+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/inheritance/</loc>
+	<lastmod>2018-05-16T16:58:25+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/cascading/</loc>
+	<lastmod>2018-05-16T16:58:27+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/css-validation/</loc>
+	<lastmod>2018-05-16T16:58:27+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/id-classes/</loc>
+	<lastmod>2018-05-16T16:58:28+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/css-dir/writing-code/</loc>
+	<lastmod>2018-05-16T16:58:29+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/js-dir/hi-world/</loc>
+	<lastmod>2018-05-16T16:58:29+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/js-dir/external-scripts/</loc>
+	<lastmod>2018-05-16T16:58:30+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/js-dir/code-structure/</loc>
+	<lastmod>2018-05-16T16:58:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/js-dir/use-strict/</loc>
+	<lastmod>2018-05-16T16:58:31+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/js-dir/variables/</loc>
+	<lastmod>2018-05-16T16:58:32+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/js-dir/name-selection/</loc>
+	<lastmod>2018-05-16T16:58:33+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/js-dir/typeof/</loc>
+	<lastmod>2018-05-16T16:58:33+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/js-dir/basic-operators/</loc>
+	<lastmod>2018-05-16T16:58:34+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/js-dir/comparison-&amp;-boolean/</loc>
+	<lastmod>2018-05-16T16:58:35+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/js-dir/alert-prompt-confirm/</loc>
+	<lastmod>2018-05-16T16:58:35+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/js-dir/if-else/</loc>
+	<lastmod>2018-05-16T16:58:36+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/js-dir/logical-operators/</loc>
+	<lastmod>2018-05-16T16:58:37+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/js-dir/primitives/</loc>
+	<lastmod>2018-05-16T16:58:37+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/js-dir/while-for/</loc>
+	<lastmod>2018-05-16T16:58:38+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/js-dir/switch/</loc>
+	<lastmod>2018-05-16T16:58:39+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/js-dir/functions/</loc>
+	<lastmod>2018-05-16T16:58:39+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/js-dir/functional-expressions/</loc>
+	<lastmod>2018-05-16T16:58:40+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/js-dir/recursion-stack/</loc>
+	<lastmod>2018-05-16T16:58:42+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/js-dir/named-functional-expressions/</loc>
+	<lastmod>2018-05-16T16:58:42+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/test-html</loc>
+	<lastmod>2018-05-16T16:58:42+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/test-css</loc>
+	<lastmod>2018-05-16T16:58:44+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://inst-proj.github.io/test-js</loc>
+	<lastmod>2018-05-16T16:58:44+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+</urlset>
